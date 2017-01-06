@@ -1,0 +1,113 @@
+<menu-principal></menu-principal>
+<div class="wrapper">
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">Adicione seus parâmetros:</h3>
+                        </div>
+                        <form ng-controller="GruposController" novalidate name="formulario" ng-submit="submeter()">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label>Grupo:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <select name="grupo" class="form-control" required  ng-model="indice.grupo" ng-options="grupo._id as (grupo.nome | uppercase) for grupo in grupos">
+                                            <option value="">Escolha um grupo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Descrição:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-pencil"></i>
+                                        </div>
+                                        <input type="text" name="Descrição" class="form-control" ng-model="indice.descricao" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Valor:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input class="form-control" type="number" name="valor" ng-model="indice.valor" required>
+                                        <span ng-show="formulario.$submitted && formulario.valor.$error.required" class="form-control alert-danger">O valor não pode ser 0.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer " ng-controller="NavCtrl">
+                                <a href="/" class="btn btn-primary">Voltar</a>
+                                <a type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">Salvar</a>
+                                <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Relação de valores</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body no-padding">
+                            <table class="table table-striped">
+                                
+                                <tr>
+                                    <th>Grupo</th>
+                                    <th>Descrição</th>
+                                    <th>valor</th>
+                                </tr>
+                                <tr>
+                                    <td>{{indice.grupo}}</td>
+                                    <td>{{indice.descricao}}</td>
+                                    <td>{{indice.valor}}</td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                        <div class="box-footer">
+                            <a href="/atribuimes" class="btn btn-success pull-right" type="submit">Calcular</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<rodape-principal></rodape-principal>
+<!-- <menu-principal></menu-principal>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Novo contrato</h3>
+                <h4>Insira aqui um novo contrato!</h4>
+                <p>Você só precisa informar o nome do contrato, é simples!</p>
+            </div>
+            <form novalidate class="row" name="formulario" ng-submit="submeter()">
+                <div class="box-body">
+                    <div class="form-group col-lg-8 col-xs-8">
+                        <label>Nome</label>
+                        <input name="nome" class="form-control " ng-model="contrato.nome"></input>
+                    </div>
+                    <div class="form-group col-lg-8 col-xs-8">
+                        <label>Numero</label>
+                        <input name="numero" type="number" class="form-control" ng-model="contrato.numero"></input>
+                    </div>
+                    
+                </div>
+                
+                <div class="box-footer col-lg-8 col-xs-8" ng-controller="NavCtrl">
+                    <a href="/" class="btn btn-primary">Voltar</a>
+                    <a type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid" href="/selecaodegrupos" >Salvar</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+<rodape-principal></rodape-principal> -->

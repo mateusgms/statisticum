@@ -1,0 +1,36 @@
+<menu-principal></menu-principal>
+<div class="wrapper">
+    <div class="content-wrapper">
+
+        <section class="content">
+            
+            <!-- /.box -->
+            <div class="col-lg-12 col-xs-12" data-ng-controller="ContratoController">
+                <!-- small box -->
+                <div class="small-box" >
+                    <div class="inner">
+                        <h3 class="box-title"  style="color: #000;">Olá {{nome}}, Seja Bem-vindo!</h3>
+
+                        <h4 style="color: #000;">Novo na plataforma? Crie um novo contrato clicando no botão novo contrato!</h4>
+                        <p style="color: #000;">Caso já esteja aqui por algum tempo, você pode retomar um contrato existente.</p>
+
+
+                    </div>
+                    <div class="icon">
+                        
+                    </div>
+                    <div class="box-footer bg-write">
+                       <div ng-controller="NavCtrl">
+                        <select ng-model="currentPage" ng-change="go(currentPage)" style="color: #000;" name="grupo" required ng-controller="ContratoController" ng-model="contrato.nome" ng-options="contrato._id as (contrato.nome | uppercase) for contrato in contratos">
+                            <option value="">Escolha um contrato</option>
+                        </select>
+                        
+                        <a href="/novocontrato" type="button" class="col-md-2 btn btn-flat btn-success pull-right">Novo contrato</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<rodape-principal></rodape-principal>

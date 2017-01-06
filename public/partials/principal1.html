@@ -1,0 +1,46 @@
+<menu-principal></menu-principal>
+<div class="wrapper">
+    <div class="content-wrapper">
+        <section class="content">
+            <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <a href="/fotos/new" class="btn btn-primary" type="button">Novo Contrato</a>
+                                </span>
+                                <input class="form-control" placeholder="Filtrar pelo título da foto..." ng-model="filtro" ng-model-options="{debounce : 500}">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>Grupo</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="row">
+                <meu-painel class="painel-animado" titulo="{{foto.titulo}}" ng-repeat="foto in fotos | filter : {titulo : filtro}">
+                <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
+                <a href="/fotos/edit/{{foto._id}}" class="btn btn-primary btn-block">Editar</a>
+                <meu-botao-perigo acao="remover(foto)" nome="Remover"></meu-botao-perigo>
+                </meu-painel>
+            </div>
+        </section>
+    </div>
+</div>
+<rodape-principal></rodape-principal>

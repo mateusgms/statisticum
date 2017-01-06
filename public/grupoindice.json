@@ -1,0 +1,21 @@
+{
+        {
+            _id: 1, 
+            nome: 'Generos Alimenticios',
+            indice: 'algum indice',
+            valor: 123.25
+
+        }, 
+        { 
+            _id: 2, 
+            nome: 'Frete de caminhões',
+            indice:'outro indice', 
+            valor: 1230.25
+        }, 
+        { 
+            _id: 3, 
+            nome: 'Aluguel de carro',
+            indice: 'mais um indice',
+            valor: 1023.25
+        }
+}

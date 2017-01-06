@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="dashboardApp">
+    <head>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="css/AdminLTE.min.css">
+        <link rel="stylesheet" href="css/skins/skin-blue.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <script src="js/app.min.js"></script>
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+        <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-resource.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/services/meus-servicos.js"></script>
+        <script src="js/controllers/foto-controller.js"></script>
+        <script src="js/controllers/fotos-controller.js"></script>
+        <script src="js/controllers/grupos-controller.js"></script>
+        <script src="js/directives/minhas-diretivas.js"></script>
+        <script src="js/controllers/Contrato-controller.js"></script>
+        <script src="js/controllers/nav-controller.js"></script>
+        <script src="js/controllers/selecao-controller.js"></script>
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+        <title>Aequilibrium</title>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini">
+        
+        <ng-view></ng-view>
+        <script>
+            $(function() {
+                $(".select2").select2();
+                $("#datemask").inputmask("dd/mm/yyyy", {
+                    "placeholder": "dd/mm/yyyy"
+                });
+                $('#datepicker').datepicker({
+                    autoclose: true
+                });
+        });
+        </script>
+    </body>
+</html>
