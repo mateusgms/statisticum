@@ -1,0 +1,36 @@
+<menu-principal></menu-principal>
+<div class="content-wrapper">
+  <section class="content">
+    <div class="col-lg-12 col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Confira aqui suas consultas anteriores</h3>
+        </div>
+        <div class="box-body">
+          <table id="example1" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Informantes</th>
+                <th>Preço Anterior</th>
+                <th>Preço Atual</th>
+                <th>variação</th>
+                <th>Observações</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{consulta.informantes}}</td>
+                <td>{{consulta.anterior}}</td>
+                <td>{{consulta.atual}}</td>
+                <td>{{consulta.variacao}}</td>
+                <td>{{consulta.observacao}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<rodape-principal></rodape-principal>
