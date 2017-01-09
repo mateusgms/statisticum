@@ -6,6 +6,12 @@ angular.module("meusServicos", ["ngResource"])
            }
          });
        })
+       .factory('ProdutosList', ['$resource',
+          function($resource) {
+            return $resource("http://sandbox.buscape.com.br/service/findProductList/lomadee/2b306b414d622f4c6137733d/BR/?sourceId=35716948&keyword=pneu&format=json", {}, {
+              get: {method: 'GET', cache: false, isArray: true}            
+        });
+    }])
        .factory("cadastroDeFotos", function(recursoFoto, $q) {
          var service = {};
 

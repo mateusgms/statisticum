@@ -32,23 +32,14 @@
         <script src="js/controllers/Contrato-controller.js"></script>
         <script src="js/controllers/nav-controller.js"></script>
         <script src="js/controllers/selecao-controller.js"></script>
+        <script src="js/controllers/produtos-controller.js"></script>
         <script src="plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
-        <title>Aequilibrium</title>
+        <title>Statisticum</title>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-green sidebar-mini">
         
         <ng-view></ng-view>
-        <script>
-            $(function() {
-                $(".select2").select2();
-                $("#datemask").inputmask("dd/mm/yyyy", {
-                    "placeholder": "dd/mm/yyyy"
-                });
-                $('#datepicker').datepicker({
-                    autoclose: true
-                });
-        });
-        </script>
+        
     </body>
 </html>

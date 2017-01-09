@@ -1,4 +1,4 @@
-angular.module('meusServicos', ['ngResource'])
+/*angular.module('meusServicos', ['ngResource'])
     .factory("recursoIndice", function($resource) {
         return $resource("/", {}, {
             get: {method: 'GET', cache: false, isArray: false},
@@ -10,4 +10,4 @@ angular.module('meusServicos', ['ngResource'])
         return $resource('/', {}, {
             get: {method:'GET', cache: false, isArray: true}
         });
-    }]);
+    }]);*/

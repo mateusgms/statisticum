@@ -2,20 +2,24 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
        .config(function($routeProvider, $locationProvider) {
          $locationProvider.html5Mode(true);
          $routeProvider.when("/", {
-             templateUrl : "partials/welcome.html",
-             controller : "ContratoController"
+             templateUrl : "partials/selecao-produtos.html",
+             controller : "ProdutosController"
          });
-         $routeProvider.when("/novocontrato", {
-             templateUrl : "partials/novo-contrato.html",
-             controller : "ControllerContrato"
+         $routeProvider.when("/mediadeprecos", {
+             templateUrl : "partials/media-preco.html",
+             controller : "ProdutosController"
          });
         $routeProvider.when("/selecaodegrupos", {
              templateUrl : "partials/selecao-grupos.html",
              controller : "SelecaoController"
          });
-         $routeProvider.when("/fotos", {
-           templateUrl : "partials/principal.html",
-           controller : "FotosController"
+         $routeProvider.when("/comparativo", {
+           templateUrl : "partials/comparativo-indicadores.html",
+           controller : "ProdutosController"
+         });
+         $routeProvider.when("/consultasanteriores", {
+           templateUrl : "partials/lista-consultas.html",
+           controller : "ProdutosController"
          });
          $routeProvider.when("/atribuimes",{
           templateUrl : "partials/atribui-mes.html",
@@ -34,10 +38,7 @@ angular.module("dashboardApp", ["minhasDiretivas", "ngAnimate", "ngRoute", "meus
            controller : "SelecaoController"
          });
 
-         $routeProvider.when("/fotos/edit/:fotoId", {
-           templateUrl : "partials/foto.html",
-           controller : "FotoController"
-         });
+         
 
          $routeProvider.otherwise({redirectTo : "/"});
        });
