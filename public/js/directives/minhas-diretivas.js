@@ -28,7 +28,7 @@ angular.module("minhasDiretivas", [])
 
          return ddo;
        })
-       .directive("meuBotaoPerigo", function() {
+       .directive("botaoExcluir", function() {
          var ddo = {};
 
          ddo.restrict = "AE";
@@ -38,7 +38,7 @@ angular.module("minhasDiretivas", [])
            nome : "@nome"
          };
 
-         ddo.templateUrl = "js/directives/meu-botao-perigo.html";
+         ddo.templateUrl = "js/directives/botao-excluir.html";
 
          return ddo;
        })
