@@ -1,19 +1,15 @@
 angular.module("dashboardApp")
-	.controller('ProdutosController', function produtosController($scope, ProdutosList){
+	.controller('ProdutosController', function produtosController($scope, $http){
 
-		$scope.produtosList = [];
-        ProdutosList.get({},
-                function success(response) {
-                    //alert($scope.challenge.question);
-                    console.log("Success:" + JSON.stringify(response));
-                    $scope.produtosList = response;
-
-                },
-                function error(errorResponse) {
-                    console.log("Error:" + JSON.stringify(errorResponse));
-                }
-        );
-
-		
+		$scope.product = '';
+        $http({
+            method:'GET',  url:'http://sandbox.buscape.com.br/service/findProductList/lomadee/2b306b414d622f4c6137733d/BR/?sourceId=35716948&keyword=pneu&format=json'
+        })       
+		.success(function(data, status, headers, config){
+            $scope.product.product = data.product.product;
+        })
+        .error(function(data, status, headers, config){
+            console.log(status);
+        });
 
 	});
