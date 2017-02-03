@@ -18,23 +18,12 @@
                             </form>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body no-padding">
-                            <table class="table table-striped">
-                                <!--  ng-repeat="product in ProdutosList"-->
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nome do produto</th>
-                                    <th>Fornecedor</th>
-                                    <th>Valor</th>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>{{product.product.pricemax}}</td>
-                                    <td>{{product.descricao}}</td>
-                                    <td>{{product.valor}}</td>
-                                </tr>
-                                
-                            </table>
+                        <div class="box-body no-padding" data-ng-controller="ProdutosController as Produtos">
+                            <ul>
+                                <li data-ng-repeat="produto in Produtos.product">
+                                    {{ Produtos.pricemax }} - {{ produto.pricemax }}
+                                </li>
+                            </ul>
                         </div>
                         <div class="box-footer">
                             <a href="/mediadeprecos" class="btn btn-success pull-right" type="submit">Enviar</a>
